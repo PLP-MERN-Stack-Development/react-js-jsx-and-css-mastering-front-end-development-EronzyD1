@@ -1,0 +1,1 @@
+export async function getCurrentWeather(lat,lng){ const r=await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current_weather=true`); if(!r.ok) throw new Error('Failed to fetch weather'); return await r.json(); }

@@ -1,0 +1,3 @@
+const BASE='https://restcountries.com/v3.1';
+export async function searchCountries(q){ if(!q) return []; const r=await fetch(`${BASE}/name/${encodeURIComponent(q)}?fields=name,cca2,cca3,capital,region,flags,latlng,population`); if(!r.ok) throw new Error('Failed to fetch countries'); return await r.json(); }
+export async function getCountryByCode(code){ const r=await fetch(`${BASE}/alpha/${encodeURIComponent(code)}?fields=name,cca2,cca3,capital,region,subregion,flags,latlng,population,languages,currencies,timezones`); if(!r.ok) throw new Error('Failed to fetch country'); const data=await r.json(); return Array.isArray(data)? data[0]: data; }

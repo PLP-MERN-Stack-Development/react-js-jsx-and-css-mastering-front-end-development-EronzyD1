@@ -1,0 +1,2 @@
+import { useCallback, useEffect, useState } from 'react';
+export default function useLocalStorage(key, initialValue){ const read=useCallback(()=>{ try{ const v=localStorage.getItem(key); return v? JSON.parse(v): initialValue;} catch{ return initialValue;} },[key,initialValue]); const [value,setValue]=useState(read); useEffect(()=>{ try{ localStorage.setItem(key, JSON.stringify(value)); } catch{} },[key,value]); return [value,setValue]; }

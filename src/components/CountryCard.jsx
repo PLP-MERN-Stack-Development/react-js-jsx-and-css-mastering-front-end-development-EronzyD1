@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom';
+import { formatNumber } from '../utils/format';
+export default function CountryCard({ c }){ return (<Link to={`/country/${c.cca2}`} className='group flex gap-4 rounded-2xl border p-4 shadow-sm hover:shadow-md transition'><img src={c.flags?.png || c.flags?.svg} alt={`${c.name?.common} flag`} className='h-12 w-16 rounded-md object-cover ring-1 ring-gray-200 group-hover:ring-blue-300' /><div><h3 className='text-lg font-semibold'>{c.name?.common}</h3><p className='text-sm opacity-80'>Region: {c.region} • Capital: {c.capital?.[0] ?? '—'} • Pop: {formatNumber(c.population)}</p></div></Link>); }

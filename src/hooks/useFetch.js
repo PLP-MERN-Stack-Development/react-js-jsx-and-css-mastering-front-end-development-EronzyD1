@@ -1,0 +1,2 @@
+import { useEffect, useState } from 'react';
+export default function useFetch(asyncFn, deps=[]){ const [data,setData]=useState(null); const [pending,setPending]=useState(false); const [error,setError]=useState(null); useEffect(()=>{ let active=true; (async()=>{ try{ setPending(true); const res=await asyncFn(); if(active) setData(res);} catch(e){ if(active) setError(e);} finally{ if(active) setPending(false);} })(); return ()=>{active=false}; }, deps); return { data, pending, error }; }

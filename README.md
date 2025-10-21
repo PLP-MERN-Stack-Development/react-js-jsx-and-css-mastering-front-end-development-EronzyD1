@@ -1,70 +1,83 @@
-# React.js and Tailwind CSS Assignment
+# 🌍 React + Tailwind Assignment – Country Weather Explorer & Task Manager
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+This project is built with **React.js**, **Vite**, and **Tailwind CSS**.  
+It demonstrates component-based architecture, state management with hooks, context for theming, API integration, and responsive design.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+## 🚀 Deployment
+Live demo: 
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
-
-## Files Included
-
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
-
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
-
-## Project Structure
-
+## 📂 Project Structure
 ```
 src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
+├── api/          # API functions (REST Countries, Open Meteo, JSONPlaceholder)
+├── components/   # Reusable UI components (Button, Card, Navbar, Footer, etc.)
+├── context/      # Theme context for light/dark mode
+├── hooks/        # Custom hooks (useFetch, useLocalStorage)
+├── pages/        # Page components (Home, Country, TaskManager, Posts)
+├── utils/        # Utility functions (e.g., number formatting)
+└── App.jsx       # Main application router
 ```
 
-## Submission
+---
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## 🧪 Features Implemented
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+### ✅ Task 1: Project Setup
+- Vite + React project scaffolded
+- Tailwind CSS configured
+- Basic routing with React Router
+- SPA rewrite configured (`vercel.json`) for deployment on Vercel
 
-## Resources
+### ✅ Task 2: Component Architecture
+- **Button** component with variants (primary, secondary, danger)
+- **Card** for boxed content
+- **Navbar (Header)** for site navigation
+- **Footer** with links and copyright
+- **Layout** wraps Navbar + Footer around main pages
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+### ✅ Task 3: State Management & Hooks
+- **TaskManager page** lets users:
+  - Add tasks
+  - Mark as completed
+  - Delete tasks
+  - Filter tasks (All, Active, Completed)
+- Hooks used:
+  - `useState` for state
+  - `useEffect` for persisting tasks
+  - `useContext` for theme management
+  - `useLocalStorage` custom hook for persistence
+
+### ✅ Task 4: API Integration
+- **REST Countries API**: search countries
+- **Open Meteo API**: get live weather for a country
+- **JSONPlaceholder API**: fetch posts with search + pagination
+- Loading/error states implemented
+
+### ✅ Task 5: Tailwind Styling
+- Responsive layout (mobile → desktop)
+- Theme switcher (light/dark) with Tailwind’s dark mode
+- Utility classes for spacing, layout, typography
+- Interactive hover/focus states
+
+---
+
+## ⚙️ Running Locally
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+---
+
+## 👤 Author
+Eromosele
