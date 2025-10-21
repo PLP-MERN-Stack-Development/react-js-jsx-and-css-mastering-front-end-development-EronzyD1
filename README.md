@@ -6,7 +6,7 @@ It demonstrates component-based architecture, state management with hooks, conte
 ---
 
 ## 🚀 Deployment
-Live demo: mern-app-swart-nu.vercel.app
+Live demo:[mern-app-swart-nu.vercel.app](https://mern-app-swart-nu.vercel.app/)
 
 ---
 
